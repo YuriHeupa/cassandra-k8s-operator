@@ -382,6 +382,15 @@ func generateCassandraStatefulSet(cc *api.CassandraCluster, status *api.Cassandr
 									},
 								},
 								v1.EnvVar{
+									Name: "POD_NAMESPACE",
+									ValueFrom: &v1.EnvVarSource{
+										FieldRef: &v1.ObjectFieldSelector{
+											APIVersion: "v1",
+											FieldPath:  "metadata.namespace",
+										},
+									},
+								},
+								v1.EnvVar{
 									Name:  "SERVICE_NAME",
 									Value: name + "-" + dcRackName,
 								},
