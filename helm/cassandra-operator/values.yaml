@@ -1,8 +1,8 @@
 ## Cassandra Operator Image
 ##
 image:
-  repository: orangeopensource/cassandra-k8s-operator
-  tag: v0.3.2-release
+  repository: gcr.io/ravesocial-ent-prod/cassandra-k8s-operator
+  tag: 0.3.2-rave
   pullPolicy: Always
   imagePullSecrets:
     enabled: false
